@@ -1,12 +1,12 @@
-import Shawcapital from "@logos/shawcapital.svg";
+import Shawcapital from "@logos/enbikchat.svg";
 import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 
 function Logo() {
   return (
-    <Link href={"/"}>
-      <div>
+    <Link href={"/"} prefetch={false} className="overflow-hidden">
+      <div className="flex items-center w-52 h-14">
         <AspectRatio
           className="flex items-center justify-center"
           ratio={16 / 9}
@@ -15,7 +15,7 @@ function Logo() {
             priority
             src={Shawcapital}
             alt="logo"
-            className="rounded-full dark:filter dark:invert"
+            className="dark:filter dark:invert"
           />
         </AspectRatio>
       </div>
